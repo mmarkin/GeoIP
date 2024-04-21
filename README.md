@@ -1,10 +1,12 @@
 # GeoIP
-A library for an ESP8266 or an ESP32 to pull timezone information based on the WiFi network's IP address using an online server called ipapi.co.
+A library for an ESP8266 or an ESP32 to pull timezone information based on the WiFi network's IP address. 
+It does this by accessing an online server called ipapi.co.
 No user keys are needed. Just add the library, call it, and read the results from a struct. See the simple sketch in the Examples directory.
 
-Add it to your code:&nbsp;&nbsp;<b>#include &#60;GeoIP&#62;</b><br>
+Add it to your code:&nbsp;&nbsp;<b>#include &#60;GeoIP&#62;</b>. This adds a datatype called <b>location_t</b>.
+Add a struct of <b>location_t<.b> type called <b>loc</b> (or whatever you want to call it) to hold the results:&nbsp;&nbsp;<b>location_t loc;</b><br>
 Create an instance of the class called <b>geoip</b> (or whatever you want to call it)&nbsp;&nbsp;<b>GeoIP geoip;</b>  
-Add a struct called <b>loc</b> (or whatever you want to call it) to hold the results:&nbsp;&nbsp;<b>location_t loc;</b><br>
+
 Get the results:&nbsp;&nbsp;<b>loc = geoip.getGeoFromWiFi(true);</b><br>
 The parameter sets whether or not the library prints the results to the serial monitor.<br> 
 Setting it to true prints the results, setting it to false or leaving it blank doesn't.
