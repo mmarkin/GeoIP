@@ -1,7 +1,7 @@
 /*******************************************************************************************************
  *
  *  Example for GeoIP Library - geographic information from IP address.
- *  Using ESP8266 device.
+ *  Using ESP8266 or ESP32 device.
  *
  *  April 20, 2024
  *  
