@@ -4,7 +4,7 @@ It does this by accessing an online server called ipapi.co.
 No user keys are needed. Just add the library, call its method, and read the results from the struct it returns. 
 See the simple sketch in the Examples directory.<br> 
 ipapi.co's free plan allows a client 30,000 lookups per month. If you need more they have paid subscriptions starting 
-at US$12 per month. 
+at $12US per month. 
 
 Add the library to your code:<br>
 <b>#include &#60;GeoIP.h&#62;</b><br>
