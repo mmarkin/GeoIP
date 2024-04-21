@@ -18,4 +18,6 @@ timezone - a 24-byte character array
 offset - an integer value with the local time zone's UTC offset in hours and minutes (eg. -1130 means -11 hours, 30 minutes)<br>
 offsetSeconds - a long integer with the time zone's UTC offset in seconds<br>
 status - a boolean value, true if the library successfully received the information, false if it didn't<br><br>
+For example, you could say Serial.print(loc.timezone);
+Or localtime = now() + loc.offsetseconds;
 
