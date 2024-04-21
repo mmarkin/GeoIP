@@ -7,6 +7,7 @@ Create an instance of the class called <b>geoip</b> (or whatever you want to cal
 Add a struct called <b>loc</b> (or whatever you want to call it) to hold the results:&nbsp;&nbsp;<b>location_t loc;</b><br>
 Get the results:&nbsp;&nbsp;<b>loc = geoip.getGeoFromWiFi(true);</b><br>
 The parameter sets whether or not the library prints the results to the serial monitor.<br> 
+Setting it to true prints the results, setting it to false or leaving it blank doesn't.
 
 The results struct has the following members:<br>
 latitude - a float value            
