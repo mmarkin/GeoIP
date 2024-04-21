@@ -4,7 +4,7 @@ It does this by accessing an online server called ipapi.co.
 No user keys are needed. Just add the library, call its method, and read the results from the struct it returns. See the simple sketch in the Examples directory.
 
 Add the library to your code:<br>
-<p style="color:green"><b>#include &#60;GeoIP&#62;</b></p>
+<b>#include &#60;GeoIP&#62;</b><br>
 This adds a new datatype called <b>location_t</b>.<br>
 Add a struct of <b>location_t</b> type called <b>loc</b> (or whatever you want to call it) to hold the results:<br>
 <b>location_t loc;</b><br>
