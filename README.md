@@ -4,7 +4,7 @@ It does this by accessing an online server called ipapi.co.
 No user keys are needed. Just add the library, call it, and read the results from a struct. See the simple sketch in the Examples directory.
 
 Add the library to your code:&nbsp;&nbsp;<b>#include &#60;GeoIP&#62;</b>. This adds a new datatype called <b>location_t</b>.<br>
-Add a struct of <b>location_t<.b> type called <b>loc</b> (or whatever you want to call it) to hold the results:&nbsp;&nbsp;<b>location_t loc;</b><br>
+Add a struct of <b>location_t</b> type called <b>loc</b> (or whatever you want to call it) to hold the results:&nbsp;&nbsp;<b>location_t loc;</b><br>
 Create an instance of the class called <b>geoip</b> (or whatever you want to call it)&nbsp;&nbsp;<b>GeoIP geoip;</b>  
 
 Get the results:&nbsp;&nbsp;<b>loc = geoip.getGeoFromWiFi(true);</b><br>
