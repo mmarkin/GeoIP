@@ -8,6 +8,7 @@
  *             revised       July 14, 2022.
  *             revised       March 15, 2024 to use ArduinoJson 7.
  *                           Adapted from Benoit Blanchon's HTTP example from the ArduinoJson library.
+ *  Released into the public domain.    
  * 
  *******************************************************************************************************/
 
