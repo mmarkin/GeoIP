@@ -8,7 +8,7 @@ Get the results: loc = geoip.getGeoFromWiFi(true);<br>
 getGeoIP's parameter sets whether or not the library prints the results to the serial monitor. Setting it to true prints the results. 
 Setting it to false or leaving it blank will not print the results.<br><br>
 The results struct has the following members:<br>
-latitude - a float value<br>            
+latitude - a float value            
 longitude a float value<br>             
 country - a 24-byte character array<br>                        
 region - a 24-byte character array<br>        
