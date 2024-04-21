@@ -5,7 +5,7 @@
  * Created by Mitch Markin, May 18, 2018.
  *         revised         July 16, 2018. 
  *         revised         December 1, 2021
- *         
+ *  Released into the public domain.       
  * 
  **************************************************************************/
 
