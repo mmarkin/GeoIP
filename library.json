@@ -1,20 +1,35 @@
 {
   "name": "GeoIP",
+  "version": "1.2.1",
   "keywords": "IP, Geolocation, Timezone, Time, Location",
   "description": "Library to get current timezone using your IP - uses ipapi.co.",
-  "repository": "https://github.com/mmarkin/GeoIP"
-  {
-    "type": "git",
-    "url": "https://github.com/mmarkin/GeoIP.git"
-  },
   "authors":
   [
     {
-      "name": "Mitch Markin",
-      "maintainer": "Mitch Markin"
+        "name": "Mitch Markin",
+        "url": "https://github.com/mmarkin/GeoIP"
+    },
+    {       
+        "maintainer": true
     }
   ],
-  "version": "1.2.1",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/mmarkin/GeoIP"
+  },
   "frameworks": "arduino",
-  "platforms": "espressif8266, espressif32"
+  "platforms": 
+  [
+    "espressif8266",
+    "espressif32"
+  ]
 }
+
+
+
+
+
+
+
+
