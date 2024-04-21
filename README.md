@@ -5,16 +5,16 @@ Add it to your code: #include <GeoIP><br>
 Create an instance of the class: GeoIP geoip;<br>  
 Add a struct to hold the results: location_t loc;<br>
 Get the results: loc = geoip.getGeoFromWiFi(true);<br>
-getGeoIP's parameter sets whether or not the library prints the results to the serial monitor. Setting it to true prints the results. 
+The parameter sets whether or not the library prints the results to the serial monitor. Setting it to true prints the results. 
 Setting it to false or leaving it blank will not print the results.<br><br>
 The results struct has the following members:<br>
 latitude - a float value            
 longitude - a float value>             
 country - a 24-byte character array                       
 region - a 24-byte character array       
-city - a 24-byte character array<br>        ;
-timezone - a 24-byte character array<br>   
-offset an integer value with the local time zone's UTC offset in hours and minutes (eg. -1130 means -11 hours, 30 minutes)<br>
-offsetSeconds - a long integer with the time zone's UTC offset in seconds<br>
+city - a 24-byte character array        ;
+timezone - a 24-byte character array   
+offset an integer value with the local time zone's UTC offset in hours and minutes (eg. -1130 means -11 hours, 30 minutes)
+offsetSeconds - a long integer with the time zone's UTC offset in seconds
 status - a boolean value, true if the library successfully received the information, false if it didn't<br><br>
 See the simple sketch in the Examples directory.
