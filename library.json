@@ -1,6 +1,6 @@
 {
   "name": "GeoIP",
-  "keywords": "IP, Geolocation, Timezone, Time, Location",
+  "keywords": "IP, Geolocation, Timezone, Time, Location, ESP32, ESP8266",
   "description": "Library to get current timezone using your IP - uses ipapi.co.",
   "version": "1.2.1",
   "repository": {
