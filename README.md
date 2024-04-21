@@ -4,7 +4,7 @@ No user keys are needed. Just add the library, call it, and read the results fro
 
 Add it to your code:&nbsp;&nbsp;#include &#60;GeoIP&#62;<br>
 Create an instance of the class called geoip (or whatever you want to call it)&nbsp;&nbsp;GeoIP geoip;  
-Add a struct called loc (or whatever you want to call it) to hold the results:&nbsp;&nbsp;location_t loc;
+Add a struct called loc (or whatever you want to call it) to hold the results:&nbsp;&nbsp;location_t loc;<br>
 Get the results:&nbsp;&nbsp;loc = geoip.getGeoFromWiFi(true);<br>
 The parameter sets whether or not the library prints the results to the serial monitor.<br> 
  Setting it to true prints the results. Setting it to false or leaving it blank will not print the results.<br><br>
