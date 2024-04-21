@@ -9,9 +9,9 @@ getGeoIP's parameter sets whether or not the library prints the results to the s
 Setting it to false or leaving it blank will not print the results.<br><br>
 The results struct has the following members:<br>
 latitude - a float value            
-longitude a float value<br>             
-country - a 24-byte character array<br>                        
-region - a 24-byte character array<br>        
+longitude - a float value>             
+country - a 24-byte character array                       
+region - a 24-byte character array       
 city - a 24-byte character array<br>        ;
 timezone - a 24-byte character array<br>   
 offset an integer value with the local time zone's UTC offset in hours and minutes (eg. -1130 means -11 hours, 30 minutes)<br>
