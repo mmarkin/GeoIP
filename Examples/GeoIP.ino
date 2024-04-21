@@ -51,7 +51,7 @@ void setup()
 
   if (loc.status)                          // Check to see if the data came in from the server.
   {
-    // Display information from GeoIP. The library can do this too if called with the parameter set to true.   
+    // Display information from GeoIP. The library can do this too if called with its parameter set to true.   
   
     Serial.print("\nLatitude: ");               Serial.println(loc.latitude);      // float
     Serial.print("Longitude: ");                Serial.println(loc.longitude);     // float
@@ -60,9 +60,7 @@ void setup()
     Serial.print("Country: ");                  Serial.println(loc.country);       // char[24]    
     Serial.print("Timezone: ");                 Serial.println(loc.timezone);      // char[24]
     Serial.print("UTC Offset: ");               Serial.println(loc.offset);        // int  (eg. -1000 means -10 hours, 0 minutes)
-    Serial.print("Offset Seconds: ");           Serial.println(loc.offsetSeconds); // long
-      
-    delay(2000);
+    Serial.print("Offset Seconds: ");           Serial.println(loc.offsetSeconds); // long    
   } 
   else
   {
