@@ -19,5 +19,5 @@ offset - an integer value with the local time zone's UTC offset in hours and min
 offsetSeconds - a long integer with the time zone's UTC offset in seconds<br>
 status - a boolean value, true if the library successfully received the information, false if it didn't<br><br>
 For example, you could say Serial.print(loc.timezone);<br>
-Or time_t localtime = now() + loc.offsetseconds;
+Or time_t localTime = now() + loc.offsetSeconds;
 
