@@ -13,7 +13,7 @@ latitude - a float value
 longitude - a float value             
 country - a 24-byte character array                       
 region - a 24-byte character array       
-city - a 24-byte character array        ;
+city - a 24-byte character array        
 timezone - a 24-byte character array   
 offset - an integer value with the local time zone's UTC offset in hours and minutes (eg. -1130 means -11 hours, 30 minutes)<br>
 offsetSeconds - a long integer with the time zone's UTC offset in seconds<br>
