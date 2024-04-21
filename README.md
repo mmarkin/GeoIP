@@ -2,7 +2,7 @@
 A library for an ESP8266 or an ESP32 to pull timezone information based on the WiFi network's IP address using an online server called ipapi.co.
 No user keys are needed. Just add the library, call it, and read the results from a struct. See the simple sketch in the Examples directory.
 
-Add it to your code:&nbsp;&nbsp;#include <GeoIP><br>
+Add it to your code:&nbsp;&nbsp;#include &#60;GeoIP&#62;><br>
 Create an instance of the class:&nbsp;&nbsp;GeoIP geoip;<br>  
 Add a struct to hold the results:&nbsp;&nbsp;location_t loc;<br>
 Get the results:&nbsp;&nbsp;loc = geoip.getGeoFromWiFi(true);<br>
