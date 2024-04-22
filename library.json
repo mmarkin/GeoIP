@@ -19,7 +19,9 @@
   ],
   "authors": [
     {
-      "name": "Mitch Markin"      
+      "name": "Mitch Markin",
+      "maintainer": true      
     }
-  ]
+  ],
+  "license": "MIT"
 }
