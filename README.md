@@ -6,27 +6,17 @@ See the simple sketch in the Examples directory.
 ipapi.co's free plan allows a client 30,000 lookups per month. If you need more they have paid subscriptions starting 
 at $12US per month. 
 
-Add the library to your code:
+Use the library in your code:
 ```c
-include <GeoIP.h>
-```
-This adds a new datatype called <b>location_t</b>.    
-Add a struct of <b>location_t</b> type called <b>loc</b> (or whatever you want to call it) to hold the results:
-```c
-location_t loc;
-```
-Create an instance of the class called <b>geoip</b> (or whatever you want to call it)
-```c
-GeoIP geoip;
-```
-Get the results:
-```c
-loc = geoip.getGeoFromWiFi(true);
+include <GeoIP.h>  // adds the library and creates new data type location_t
+location_t loc;    // declare a location_t variable
+GeoIP geoip;       // create instance of GeoIP class
+loc = geoip.getGeoFromWiFi(true);   // get the results
 ```
 The parameter sets whether or not the library prints the results to the serial monitor.    
 Setting it to true prints the results, setting it to false or leaving it blank doesn't.
 
-The results struct has the following members:    
+The library returns the results in a struct with the following members:    
 latitude - a float value            
 longitude - a float value             
 country - a character array up to 24 bytes long                      
@@ -37,7 +27,9 @@ offset - an integer value with the local time zone's UTC offset in hours and min
 offsetSeconds - a long integer with the time zone's UTC offset in seconds    
 status - a boolean value, true if the library successfully received the information, false if it didn't    
 
-For example, you could say:    
-<b>Serial.print(loc.timezone);</b>    
-<b>time_t localTime = now() + loc.offsetSeconds;</b>&nbsp;&nbsp;(Assuming the now() function returns UTC time)
+For example, you could say:
+```c
+Serial.print(loc.timezone);    
+time_t localTime = now() + loc.offsetSeconds;    // the now() function returns UTC time
+```
 
