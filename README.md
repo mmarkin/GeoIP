@@ -11,12 +11,18 @@ Add the library to your code:
 include <GeoIP.h>
 ```
 This adds a new datatype called <b>location_t</b>.    
-Add a struct of <b>location_t</b> type called <b>loc</b> (or whatever you want to call it) to hold the results:    
-<b>location_t loc;</b>    
-Create an instance of the class called <b>geoip</b> (or whatever you want to call it)     
-<b>GeoIP geoip;</b>     
-Get the results:    
-<b>loc = geoip.getGeoFromWiFi(true);</b>    
+Add a struct of <b>location_t</b> type called <b>loc</b> (or whatever you want to call it) to hold the results:
+```c
+location_t loc;
+```
+Create an instance of the class called <b>geoip</b> (or whatever you want to call it)
+```c
+GeoIP geoip;
+```
+Get the results:
+```c
+loc = geoip.getGeoFromWiFi(true);
+```
 The parameter sets whether or not the library prints the results to the serial monitor.    
 Setting it to true prints the results, setting it to false or leaving it blank doesn't.
 
