@@ -6,7 +6,7 @@ See the simple sketch in the Examples directory.
 ipapi.co's free plan allows a client 30,000 lookups per month. If you need more they have paid subscriptions starting 
 at $12US per month. 
 
-Add the library to your code:   
+Add the library to your code:
 ```c
 include <GeoIP.h>
 ```
