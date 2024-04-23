@@ -1,7 +1,7 @@
 {
   "name": "GeoIP",
   "keywords": "IP, Geolocation, Timezone, Time, Location, ESP32, ESP8266",
-  "description": "Library to get local timezone and geographic location using your network's IP address - uses ipapi.co.",
+  "description": "Library to get local timezone and geographic location based on your network's IP address - uses ipapi.co.",
   "version": "1.2.2",
   "repository": {
     "type": "git",
