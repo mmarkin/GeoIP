@@ -8,9 +8,9 @@ at $12US per month.
 
 Use the library in your code:
 ```c
-include <GeoIP.h>                  // add the library, creates a new data type  called location_t
-location_t loc;                    // declare a location_t variable
-GeoIP geoip;                       // create an instance of GeoIP class
+include <GeoIP.h>                  // add the GeoIP class, creates a new data type called location_t
+location_t loc;                    // declare a location_t variable ( it's a struct to hold the results)
+GeoIP geoip;                       // create an instance of the GeoIP class
 loc = geoip.getGeoFromWiFi(true);  // get the results
 ```
 The parameter sets whether or not the library prints the results to the serial monitor.    
