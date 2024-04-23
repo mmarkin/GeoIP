@@ -6,8 +6,10 @@ See the simple sketch in the Examples directory.
 ipapi.co's free plan allows a client 30,000 lookups per month. If you need more they have paid subscriptions starting 
 at $12US per month. 
 
-Add the library to your code:    
-<b>#include &#60;GeoIP.h&#62;</b>    
+Add the library to your code:   
+```c
+include <GeoIP.h>
+```
 This adds a new datatype called <b>location_t</b>.    
 Add a struct of <b>location_t</b> type called <b>loc</b> (or whatever you want to call it) to hold the results:    
 <b>location_t loc;</b>    
