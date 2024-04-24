@@ -8,7 +8,7 @@ at $12US per month.
 
 Use the library in your code:
 ```c
-#include <GeoIP.h>                  // add the GeoIP class, creates a new data type called location_t
+#include <GeoIP.h>                 // add the GeoIP class, creates a new data type called location_t
 location_t loc;                    // declare a location_t variable 
 GeoIP geoip;                       // create an instance of the GeoIP class
 loc = geoip.getGeoFromWiFi(true);  // get the results
