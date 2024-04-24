@@ -139,7 +139,11 @@ location_t GeoIP::getInfo()
   location.offsetSeconds = (location.offset / 100) * 3600 + (location.offset % 100) * 60;             
   location.status = true;  
 
-  // Disconnect
+  location.city[sizeof(location.city)-1] = '\0';
+  location.region[sizeof(location.region)-1] = '\0';
+  location.country[sizeof(location.country)-1] = '\0';
+  location.timezone[sizeof(location.timezone)-1] = '\0';
+  
   client.stop();     
   return location;   
 }  
