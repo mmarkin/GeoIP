@@ -4,8 +4,6 @@ It does this by accessing an online server called ipapi.co.
 No user account or access keys are needed to use ipapi.co's free plan. Just add the library to your code, call its method, 
 and read the results from the struct it returns.
 
-See the simple sketch in the examples directory.
-
 The library is available in the library managers for PlatformIO and the Arduino IDE. Just search for geoip.
 
 ipapi.co's free plan allows a client 30,000 lookups per month. If you need more they have paid subscriptions starting 
@@ -37,4 +35,6 @@ For example, you could say:
 Serial.print(loc.timezone);    
 time_t localTime = now() + loc.offsetSeconds;    // the now() function returns UTC time
 ```
+
+See the simple sketch in the examples directory for more details.
 
