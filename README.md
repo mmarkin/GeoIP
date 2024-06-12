@@ -5,7 +5,7 @@ No user account or access keys are needed to use ipapi.co's free plan. Just add 
 and read the results from the struct it returns.
 
 The library is available in the library managers for PlatformIO and the Arduino IDE. Just search for geoip.
-For PlatformIO it can be added to the project by adding this line to lib_deps in the platformio.ini file:    
+For PlatformIO it can be automatically installed for the the project by adding this line to lib_deps in the platformio.ini file:    
 mmarkin/GeoIP@^1.2.6   
 eg: lib_deps = mmarkin/GeoIP@^1.2.6
 
