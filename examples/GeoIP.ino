@@ -6,11 +6,18 @@
  *  April 20, 2024
  *  
  *******************************************************************************************************/
- 
-#include <ESP8266WiFi.h>
+
+// For ESP8266
+#include <ESP8266WiFi.h>         
 #include <ESP8266WiFiMulti.h>
+
+// For ESP32 
+//#include <WiFi.h>                             
+//#include <WiFiMulti.h>
+
 #include <GeoIP.h>
 
+WiFi.mode(WIFI_STA);
 GeoIP geoip;                                  // create GeoIP object 'geoip'
 ESP8266WiFiMulti wifiMulti;                   // create WiFiMulti object 'wifiMulti' 
 
