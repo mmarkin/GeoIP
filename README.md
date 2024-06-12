@@ -2,9 +2,12 @@
 A library for ESP8266 or ESP32 to pull timezone and location information based on the WiFi network's IP address. 
 It does this by accessing an online server called ipapi.co.
 No user account or access keys are needed to use ipapi.co's free plan. Just add the library to your code, call its method, 
-and read the results from the struct it returns. 
-See the simple sketch in the examples directory. 
+and read the results from the struct it returns.
+
+See the simple sketch in the examples directory.
+
 The library is available in the library managers for PlatformIO and the Arduino IDE. Just search for geoip.
+
 ipapi.co's free plan allows a client 30,000 lookups per month. If you need more they have paid subscriptions starting 
 at $12US per month. 
 
