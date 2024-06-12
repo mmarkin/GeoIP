@@ -17,7 +17,6 @@
 
 #include <GeoIP.h>
 
-WiFi.mode(WIFI_STA);
 GeoIP geoip;                                  // create GeoIP object 'geoip'
 ESP8266WiFiMulti wifiMulti;                   // create WiFiMulti object 'wifiMulti' 
 
@@ -26,7 +25,9 @@ location_t loc;                               // data structure to hold results
 void setup()
 {
   Serial.begin(115200);
-  delay(100);  
+  delay(100);
+
+  WiFi.mode(WIFI_STA);
 
   wifiMulti.addAP("SSID", "Password");              // first SSID to try
   wifiMulti.addAP("SSID", "Password");              // second SSID to try, etc.
