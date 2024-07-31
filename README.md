@@ -38,5 +38,7 @@ Serial.print(loc.timezone);
 time_t localTime = now() + loc.offsetSeconds;    // assuming the now() function returns UTC time
 ```
 
+(The now() function mentioned is part of the TimeLib library. It usually gets set to UTC time in code for ESP devices that sync to Network Time Protocol servers.)
+
 See the simple sketch in the examples directory for more details.
 
