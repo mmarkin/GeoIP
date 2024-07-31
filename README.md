@@ -35,7 +35,7 @@ status - a boolean value, true if the library successfully received the informat
 For example, you could say:
 ```c
 Serial.print(loc.timezone);    
-time_t localTime = now() + loc.offsetSeconds;    // the now() function returns UTC time
+time_t localTime = now() + loc.offsetSeconds;    // assuming the now() function returns UTC time
 ```
 
 See the simple sketch in the examples directory for more details.
