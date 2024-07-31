@@ -11,7 +11,7 @@ lib_deps = mmarkin/GeoIP@^1.2.6
 ipapi.co's free plan allows a client 30,000 lookups per month. If you need more they have paid subscriptions starting 
 at $12US per month. 
 
-To use the library in your code:
+Here is a quick summary on how to use the library in your code. See the simple sketch in the examples directory for details. 
 ```c
 #include <GeoIP.h>                 // add the GeoIP class, creates a new data type called location_t
 location_t loc;                    // declare a location_t variable 
@@ -39,6 +39,3 @@ time_t localTime = now() + loc.offsetSeconds;    // assuming the now() function 
 ```
 
 (The now() function mentioned is part of the TimeLib library. It usually gets set to UTC time in code for ESP devices that sync to Network Time Protocol servers.)
-
-See the simple sketch in the examples directory for more details.
-
