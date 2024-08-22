@@ -38,6 +38,6 @@ Serial.print(loc.timezone);
 time_t localTime = now() + loc.offsetSeconds;    // assuming the now() function returns UTC time
 ```
 
-The now() function mentioned is part of the TimeLib library. It's frequently used in code for ESP devices that sync to Network Time Protocol (NTP) servers.
-The now() function keeps track of time in seconds. NTP servers send a timestamp that combines the date and time in one long integer as the number of seconds
-that have elapsed since midnight, January 1, 1970 UTC. Therefore the timestamp has to be adjusted to show local time. 
+The now() function mentioned above is part of the TimeLib library. It's frequently used in code for ESP devices that sync to Network Time Protocol (NTP) servers.
+The now() function keeps track of time and date in seconds. NTP servers send a timestamp that combines the time and date in one long integer as the number of seconds
+that have elapsed since midnight, January 1, 1970, UTC. Therefore to show local time the timestamp has to be adjusted by the number of seconds local time differs from UTC. 
