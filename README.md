@@ -9,7 +9,7 @@ For PlatformIO it can be installed automatically by adding this line to the proj
 lib_deps = mmarkin/GeoIP@^1.2.6    
 
 ipapi.co's free plan allows a client 30,000 lookups per month. If you need more they have paid subscriptions starting 
-at $12US per month. 
+at $12US per month. The key can be added to the library as shown in a comment in the src/main.cpp file. 
 
 Here is a quick summary on how to use the library in your code. See the simple sketch in the examples directory for details. 
 ```c
