@@ -78,6 +78,8 @@ location_t GeoIP::getInfo()
 
   // Send HTTP request
   client.println(F("GET /json/ HTTP/1.1"));
+  // If you have an API key provied by ipapi.co use this line instead of the one above and insert your key
+  //client.println(F("GET /json/?key=<api key provided by ipapi> HTTP/1.1"));
   client.print(F("Host: "));   
   client.println(host);
   client.println(F("User-Agent: esp-idf/1.0 esp32"));
