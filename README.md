@@ -18,16 +18,15 @@ First include the library, declare a location_t variable, and create an instance
 location_t loc;                    // declare a location_t variable 
 GeoIP geoip;                       // create an instance of the GeoIP class
 ```
-Then use one of these function calls depending on whether or not you have an API key and you want the results shown on the serial monitor.   
+Then get the results by using one of these function calls depending on whether or not you have an API key and you want the results shown on the serial monitor.   
 ```c
-loc = geoip.getGeoFromWiFi(true);  // get the results
-loc = geoip.getGeoFromWiFi(false); 
-loc = geoip.getGeoFromWiFi("<Your API Key>", true);
-loc = geoip.getGeoFromWiFi("2wJ0qTsc7jxJIVmYhqdj7bpYiilcUdiu6dzkdUckYnSZ2Z3JVO", false);   
-loc = geoip.getGeoFromWiFi("2wJ0qTsc7jxJIVmYhqdj7bpYiilcUdiu6dzkdUckYnSZ2Z3JVO");
+loc = geoip.getGeoFromWiFi();                        // no key, results not shown on serial monitor
+loc = geoip.getGeoFromWiFi(false);                   // no key, results not shown on serial monitor
+loc = geoip.getGeoFromWiFi(true);                    // no key, show results on on serial monitor
+loc = geoip.getGeoFromWiFi("<Your API Key>");        // use api key, results not shown on serial monitor
+loc = geoip.getGeoFromWiFi("<Your API Key>", false); // use api key, results not shown on serial monitor
+loc = geoip.getGeoFromWiFi("<Your API Key>", true);  // use api key, show results on on serial monitor
 ```
-The parameter in the function call sets whether or not the library prints the results to the serial monitor.    
-Setting it to true prints the results, setting it to false or leaving it blank doesn't.
 
 The library returns the results in a struct with the following members:    
 latitude - a float value            
