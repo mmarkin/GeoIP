@@ -5,11 +5,11 @@ No user account or access key is needed to use ipapi.co's free plan. Just add th
 and read the results from the struct it returns.
 
 ipapi.co's free plan allows a client 30,000 lookups per month. If you need more they have paid subscriptions starting 
-at $12US per month. In that case, your key can be added to the library as shown in a comment in the src/GeoIP.cpp file. 
+at $12US per month. In that case, your API key can be added when the library's method is called as shown below. 
 
 The library is available in the library managers for PlatformIO and the Arduino IDE. Just search for geoip.
 For PlatformIO it can be installed automatically by adding this line to the project's platformio.ini file:       
-lib_deps = mmarkin/GeoIP@^1.2.6  
+lib_deps = mmarkin/GeoIP@^1.3.1 
 
 Here is a quick summary on how to use the library in your code. See the simple sketch in the examples directory for details.  
 First include the library, declare a location_t variable, and create an instance of the GeoIP class.  
@@ -23,9 +23,9 @@ Then get the results by using one of these function calls depending on whether o
 loc = geoip.getGeoFromWiFi();                        // no key, results not shown on serial monitor
 loc = geoip.getGeoFromWiFi(false);                   // no key, results not shown on serial monitor
 loc = geoip.getGeoFromWiFi(true);                    // no key, show results on on serial monitor
-loc = geoip.getGeoFromWiFi("<Your API Key>");        // use api key, results not shown on serial monitor
-loc = geoip.getGeoFromWiFi("<Your API Key>", false); // use api key, results not shown on serial monitor
-loc = geoip.getGeoFromWiFi("<Your API Key>", true);  // use api key, show results on on serial monitor
+loc = geoip.getGeoFromWiFi("<Your API Key>");        // use API key, results not shown on serial monitor
+loc = geoip.getGeoFromWiFi("<Your API Key>", false); // use API key, results not shown on serial monitor
+loc = geoip.getGeoFromWiFi("<Your API Key>", true);  // use API key, show results on on serial monitor
 ```
 
 The library returns the results in a struct with the following members:    
