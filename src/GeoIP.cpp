@@ -1,3 +1,4 @@
+
 /*******************************************************************************************************
  *
  *  GeoIP.cpp - Library for getting geographic information from IP address.
@@ -6,10 +7,10 @@
  *             revised       July 16, 2018. 
  *             revised       December 1, 2021.
  *             revised       July 14, 2022 to add status.
- *             revised       March 15, 2024 to use ArduinoJson 7.
+ *                           March 15, 2024  Changes to use ArduinoJson 7.
  *                           Adapted from Benoit Blanchon's HTTP example from the ArduinoJson library.
- *                           April 24, 2024
- *                           Added information returned if things went wrong.
+ *                           April 24, 2024  Added information returned if things went wrong.
+ *                           August 28, 2024 Changes to add api key.
  *  Released into the public domain.    
  * 
  *******************************************************************************************************/
@@ -21,37 +22,34 @@ GeoIP::GeoIP()    // constructor
 
 location_t GeoIP::getGeoFromWiFi()
 {
-  location_t temp = getInfo();
+  temp = getInfo();
   return temp;
 }
 
 location_t GeoIP::getGeoFromWiFi(const bool showResults)
 {
-  location_t temp = getInfo();
-
-  if (showResults)
-  {  
-    Serial.println(F("Json parsing results from GeoIP:"));
-    Serial.print(F("  City:           "));      Serial.println(temp.city);
-    Serial.print(F("  Region:         "));      Serial.println(temp.region);    
-    Serial.print(F("  Country:        "));      Serial.println(temp.country);     
-    Serial.print(F("  Latitude:       "));      Serial.println(temp.latitude, 3);
-    Serial.print(F("  Longitude:      "));      Serial.println(temp.longitude, 3);
-    Serial.print(F("  Time Zone:      "));      Serial.println(temp.timezone);    
-    Serial.print(F("  UTC Offset:     "));      Serial.println(temp.offset);
-    Serial.print(F("  Offset Seconds: "));      Serial.println(temp.offsetSeconds);
-  }
+  temp = getInfo(false);       // false for no key
+  if (showResults) results();
   return temp;
 }
 
+location_t GeoIP::getGeoFromWiFi(const char *apiKey, const bool showResults)
+{
+  strncpy(key, apiKey, 71);
+  temp = getInfo(true);         // true for key
+  if (showResults) results(); 
+  return temp;
+}
+
+
 // Use WiFiClientSecure class to create TLS connection
 
-location_t GeoIP::getInfo()
+location_t GeoIP::getInfo(bool hasKey)
 {
   const char* host = "ipapi.co";
   const int httpsPort = 443; 
   WiFiClientSecure client;
-  location_t location;
+  
   
   client.setInsecure();
   
@@ -75,11 +73,22 @@ location_t GeoIP::getInfo()
   }
 
   Serial.println(F("Connected!"));
+  Serial.print(F("Sending request "));
 
   // Send HTTP request
-  client.println(F("GET /json/ HTTP/1.1"));
-  // If you have an API key provied by ipapi.co use this line instead of the one above and insert your key
-  //client.println(F("GET /json/?key=<api key provided by ipapi> HTTP/1.1"));
+  if (hasKey)   
+  {
+    Serial.println("with api key...");
+    client.print(F("GET /json/?key="));
+    client.print(key);
+    client.println(F(" HTTP/1.1"));
+  }
+  else 
+  {
+    Serial.println("without api key...");
+    client.println(F("GET /json/ HTTP/1.1"));
+  }  
+
   client.print(F("Host: "));   
   client.println(host);
   client.println(F("User-Agent: esp-idf/1.0 esp32"));
@@ -118,8 +127,9 @@ location_t GeoIP::getInfo()
     return location;
   }
 
-  // Parse JSON object
-  JsonDocument doc;  
+  Serial.println(F("Response received!"));
+
+  // Parse JSON object  
   DeserializationError error = deserializeJson(doc, client);
 
   if (error) 
@@ -131,6 +141,26 @@ location_t GeoIP::getInfo()
     return location;
   }
 
+  setStruct();  
+  client.stop();     
+  return location;   
+}
+
+void GeoIP::results()
+{
+  Serial.println(F("Json parsing results from GeoIP:"));
+  Serial.print(F("  City:           "));      Serial.println(temp.city);
+  Serial.print(F("  Region:         "));      Serial.println(temp.region);    
+  Serial.print(F("  Country:        "));      Serial.println(temp.country);     
+  Serial.print(F("  Latitude:       "));      Serial.println(temp.latitude, 3);
+  Serial.print(F("  Longitude:      "));      Serial.println(temp.longitude, 3);
+  Serial.print(F("  Time Zone:      "));      Serial.println(temp.timezone);    
+  Serial.print(F("  UTC Offset:     "));      Serial.println(temp.offset);
+  Serial.print(F("  Offset Seconds: "));      Serial.println(temp.offsetSeconds);
+}
+
+void GeoIP::setStruct()
+{
   // Set the geo info struct. 
   // There is other information about the location in the JSON document 
   // such as country code, continent, country capital, languages, calling code, currency, 
@@ -153,13 +183,11 @@ location_t GeoIP::getInfo()
   location.region[sizeof(location.region)-1] = '\0';
   location.country[sizeof(location.country)-1] = '\0';
   location.timezone[sizeof(location.timezone)-1] = '\0';
-  
-  client.stop();     
-  return location;   
-}  
+}
+
 
 /*******************************************************************************************************
  * 
  *    End
  *    
- *******************************************************************************************************/    
+ *******************************************************************************************************/ 
