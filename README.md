@@ -25,7 +25,7 @@ loc = geoip.getGeoFromWiFi();                        // no key, results not show
 loc = geoip.getGeoFromWiFi(false);                   // no key, results not shown on serial monitor
 loc = geoip.getGeoFromWiFi(true);                    // no key, show results on on serial monitor
 loc = geoip.getGeoFromWiFi("Your API Key");          // use API key, results not shown on serial monitor
-loc = geoip.getGeoFromWiFi("Your API Key", false)  ; // use API key, results not shown on serial monitor
+loc = geoip.getGeoFromWiFi("Your API Key", false);   // use API key, results not shown on serial monitor
 loc = geoip.getGeoFromWiFi("Your API Key", true);    // use API key, show results on on serial monitor
 ```
 
