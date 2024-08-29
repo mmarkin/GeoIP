@@ -3,8 +3,9 @@
  * GeoIP.h - Library for getting geographic information from IP address.
  * Using ESP8266  or ESP32 device.
  * Created by Mitch Markin, May 18, 2018.
- *         revised         July 16, 2018. 
- *         revised         December 1, 2021
+ *         revised          July 16, 2018. 
+ *         revised          December 1, 2021.
+ *         revised          August 28, 2024.
  *  Released into the public domain.       
  * 
  **************************************************************************/
@@ -33,10 +34,18 @@ class GeoIP
   public:
     GeoIP();                                  // constructor   
     location_t getGeoFromWiFi();              // connect and get information 
-    location_t getGeoFromWiFi(const bool showResults);                              
+    location_t getGeoFromWiFi(const bool showResults);
+    location_t getGeoFromWiFi(const char *apiKey, const bool showResults = false);                            
     
   protected: 
-    location_t getInfo();                         
+    location_t getInfo(bool hasKey = false);   
+    location_t getInfoWithKey(const char *apiKey);  
+    location_t location;     
+    location_t temp;
+    JsonDocument doc;  
+    char key[72];
+    void results();
+    void setStruct();                   
 };
 
 #endif
