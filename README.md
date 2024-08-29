@@ -11,12 +11,20 @@ The library is available in the library managers for PlatformIO and the Arduino 
 For PlatformIO it can be installed automatically by adding this line to the project's platformio.ini file:       
 lib_deps = mmarkin/GeoIP@^1.2.6  
 
-Here is a quick summary on how to use the library in your code. See the simple sketch in the examples directory for details. 
+Here is a quick summary on how to use the library in your code. See the simple sketch in the examples directory for details.  
+First include the library, declare a location_t variable, and create an instance of the GeoIP class.  
 ```c
 #include <GeoIP.h>                 // add the GeoIP class, creates a new data type called location_t
 location_t loc;                    // declare a location_t variable 
 GeoIP geoip;                       // create an instance of the GeoIP class
+```
+Then use one of these function calls depending on whether or not you have an API key and you want the results shown on the serial monitor.   
+```c
 loc = geoip.getGeoFromWiFi(true);  // get the results
+loc = geoip.getGeoFromWiFi(false); 
+loc = geoip.getGeoFromWiFi("<Your API Key>", true);
+loc = geoip.getGeoFromWiFi("2wJ0qTsc7jxJIVmYhqdj7bpYiilcUdiu6dzkdUckYnSZ2Z3JVO", false);   
+loc = geoip.getGeoFromWiFi("2wJ0qTsc7jxJIVmYhqdj7bpYiilcUdiu6dzkdUckYnSZ2Z3JVO");
 ```
 The parameter in the function call sets whether or not the library prints the results to the serial monitor.    
 Setting it to true prints the results, setting it to false or leaving it blank doesn't.
