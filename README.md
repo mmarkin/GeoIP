@@ -15,7 +15,7 @@ Here is a quick summary on how to use the library in your code. See the simple s
 First include the library, declare a location_t variable, and create an instance of the GeoIP class.  
 ```c
 #include <GeoIP.h>                 // add the GeoIP class, creates a new data type called location_t
-location_t loc;                    // declare a location_t variable 
+location_t loc;                    // declare a location_t variable to hold the results
 GeoIP geoip;                       // create an instance of the GeoIP class
 ```
 Then get the results by using one of these function calls depending on whether or not you have an API key and you want the results shown on the serial monitor.   
