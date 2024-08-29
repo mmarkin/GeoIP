@@ -47,7 +47,7 @@ void setup()
   loc.status = false;
   uint8_t count = 0;
 
-  while (!loc.status && count < 21)     // Try 20 times to connect to geoip server.
+  while (!loc.status && count < 21)     // Try up to 20 times to connect to geoip server.
                                         // Usually it happens on the first try.
   {
     count++;
