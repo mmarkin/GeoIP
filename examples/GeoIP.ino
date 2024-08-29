@@ -52,9 +52,12 @@ void setup()
   {
     count++;
     Serial.printf("Attempt %u of 20 to get Geo info.\r\n", count);    
-    loc = geoip.getGeoFromWiFi(true);      // true to show results on serial monitor
-    //loc = geoip.getGeoFromWiFi(false);     // false to not show results on serial monitor
-    //loc = geoip.getGeoFromWiFi();          // no parameter to not show results on serial monitor                                        
+    loc = geoip.getGeoFromWiFi();                        // no key, results not shown on serial monitor
+    //loc = geoip.getGeoFromWiFi(false);                   // no key, results not shown on serial monitor
+    //loc = geoip.getGeoFromWiFi(true);                    // no key, show results on on serial monitor
+    //loc = geoip.getGeoFromWiFi("Your API Key");          // use API key, results not shown on serial monitor
+    //loc = geoip.getGeoFromWiFi("Your API Key", false);   // use API key, results not shown on serial monitor
+    //loc = geoip.getGeoFromWiFi("Your API Key", true);    // use API key, show results on on serial monitor                                    
   } 
 
   if (loc.status)                          // Check to see if the data came in from the server.
