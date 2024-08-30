@@ -62,7 +62,7 @@ void setup()
 
   if (loc.status)                          // Check to see if the data came in from the server.
   {
-    // Display information from GeoIP. The library can do this too if called with its parameter set to true.   
+    // Display information from GeoIP. The library can do this too if true is added to the function call.   
   
     Serial.print("\nLatitude: ");               Serial.println(loc.latitude);      // float
     Serial.print("Longitude: ");                Serial.println(loc.longitude);     // float
