@@ -51,7 +51,10 @@ void setup()
                                         // Usually it happens on the first try.
   {
     count++;
-    Serial.printf("Attempt %u of 20 to get Geo info.\r\n", count);    
+    Serial.printf("Attempt %u of 20 to get Geo info.\r\n", count); 
+
+    // Use one of the following function calls. API key must be in quotation marks.
+    
     loc = geoip.getGeoFromWiFi();                        // no key, results not shown on serial monitor
     //loc = geoip.getGeoFromWiFi(false);                   // no key, results not shown on serial monitor
     //loc = geoip.getGeoFromWiFi(true);                    // no key, show results on on serial monitor
