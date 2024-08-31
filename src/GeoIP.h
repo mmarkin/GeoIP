@@ -42,8 +42,7 @@ class GeoIP
     location_t location;     
     JsonDocument doc;  
     const char *key;
-    location_t getInfo(bool hasKey);   
-    location_t getInfoWithKey(const char *apiKey);
+    location_t getInfo(bool hasKey);    
     void results();
     void setStruct();                   
 };
