@@ -34,7 +34,6 @@ class GeoIP
 {
   public:
     GeoIP();                                  // constructor   
-    //location_t getGeoFromWiFi();              // connect and get information 
     location_t getGeoFromWiFi(const bool showResults = false);
     location_t getGeoFromWiFi(const char *apiKey, const bool showResults = false);                            
     
