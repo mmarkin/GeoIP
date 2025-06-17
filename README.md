@@ -32,10 +32,10 @@ loc = geoip.getGeoFromWiFi("Your API Key", true);    // use API key, show result
 The library returns the results in a struct with the following members:    
 latitude - a float value            
 longitude - a float value             
-country - a character array up to 24 bytes long                      
-region - a character array up to 24 bytes long       
-city - a character array up to 24 bytes long         
-timezone - a character array up to 24 bytes long   
+country - a character array up to 36 bytes long                      
+region - a character array up to 36 bytes long       
+city - a character array up to 36 bytes long         
+timezone - a character array up to 36 bytes long   
 offset - an integer value with the local time zone's UTC offset in hours and minutes (eg. -1130 means -11 hours, 30 minutes or 800 means 8 hours, 0 minutes)        
 offsetSeconds - a long integer with the time zone's UTC offset in seconds    
 status - a boolean value, true if the library successfully received the information, false if it didn't    
