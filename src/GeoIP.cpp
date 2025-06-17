@@ -2,7 +2,7 @@
  *
  *  GeoIP.cpp - Library for getting geographic information from IP address.
  *  Using ESP8266 or ESP32 device.
- *  v 1.3.2
+ *  v 1.4.1
  *  Created by Mitch Markin, May 18, 2018.
  *             revised       July 16, 2018. 
  *             revised       December 1, 2021.
