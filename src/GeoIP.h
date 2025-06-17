@@ -7,6 +7,7 @@
  *         revised          July 16, 2018. 
  *         revised          December 1, 2021.
  *         revised          August 28, 2024.
+ *         revised          June 17, 2025.
  *  Released into the public domain.       
  * 
  **************************************************************************/
@@ -21,10 +22,10 @@
 typedef struct {
     float latitude;             
     float longitude;     
-    char  country[24];                
-    char  region[24];
-    char  city[24];
-    char  timezone[24];  
+    char  country[36];                
+    char  region[36];
+    char  city[36];
+    char  timezone[36];  
     int   offset;              // UTC offset in hours and minutes (eg. -1130 means -11 hours, 30 minutes)
     long  offsetSeconds;
     bool  status;       
