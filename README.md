@@ -9,7 +9,7 @@ at $12US per month. In that case, your API key can be added when the library's m
 
 The library is available in the library managers for PlatformIO and the Arduino IDE. Just search for geoip.
 For PlatformIO it can be installed automatically by adding this line to the project's platformio.ini file:       
-lib_deps = mmarkin/GeoIP@^1.3.1 
+lib_deps = mmarkin/GeoIP@^1.4.1 
 
 Here is a quick summary on how to use the library in your code. See the simple sketch in the examples directory for details.  
 First include the library, declare a location_t variable, and create an instance of the GeoIP class.  
