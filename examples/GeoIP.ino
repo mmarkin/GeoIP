@@ -69,10 +69,10 @@ void setup()
   
     Serial.print("\nLatitude: ");               Serial.println(loc.latitude);      // float
     Serial.print("Longitude: ");                Serial.println(loc.longitude);     // float
-    Serial.print("City: ");                     Serial.println(loc.city);          // char[24]
-    Serial.print("Region: ");                   Serial.println(loc.region);        // char[24]
-    Serial.print("Country: ");                  Serial.println(loc.country);       // char[24]    
-    Serial.print("Timezone: ");                 Serial.println(loc.timezone);      // char[24]
+    Serial.print("City: ");                     Serial.println(loc.city);          // char[36]
+    Serial.print("Region: ");                   Serial.println(loc.region);        // char[36]
+    Serial.print("Country: ");                  Serial.println(loc.country);       // char[36]    
+    Serial.print("Timezone: ");                 Serial.println(loc.timezone);      // char[36]
     Serial.print("UTC Offset: ");               Serial.println(loc.offset);        // int  (eg. -1000 means -10 hours, 0 minutes)
     Serial.print("Offset Seconds: ");           Serial.println(loc.offsetSeconds); // long    
   } 
